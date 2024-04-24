@@ -124,12 +124,12 @@ public class VariableNamesTheme {
         System.out.println("2.boolean-переменные" + " \n");
 
         // сотни равны?
-        boolean hundredsAreEqual = true;
-        System.out.println("сотни равны? " + hundredsAreEqual);
+        boolean hasEqualhundreds = true;
+        System.out.println("сотни равны? " + hasEqualhundreds);
 
         // компьютер включен?
-        boolean isTurnedOn = true;
-        System.out.println("компьютер включен? " + isTurnedOn);
+        boolean isTurnedOnComputer = true;
+        System.out.println("компьютер включен? " + isTurnedOnComputer);
 
         // есть равные цифры?
         boolean hasEqualNumbers = false;
@@ -140,55 +140,54 @@ public class VariableNamesTheme {
         System.out.println("создано? " + isCreated);
 
         // пустое?
-        boolean isEmpty = true;
-        System.out.println("пустое? " + isEmpty);
+        boolean empty = true;
+        System.out.println("пустое? " + empty);
 
         // активное?
-        boolean isActive = true;
-        System.out.println("активное? " + isActive);
+        boolean active = true;
+        System.out.println("активное? " + active);
 
         // новое?
         boolean isNew = false;
         System.out.println("новое? " + isNew);
 
         // электронная почта действительная?
-        boolean isEmailVerified = false;
-        System.out.println("электронная почта действительная? " + isEmailVerified);
+        boolean isValidEmail = false;
+        System.out.println("электронная почта действительная? " + isValidEmail);
 
         // имеются уникальные строки?
         boolean hasUniqueStrings = true;
         System.out.println("имеются уникальные строки? " + hasUniqueStrings);
-        System.out.println();
 
         // название блока
-        System.out.println("3.Аббревиатуры" + " \n");
+        System.out.println(" \n" + "3.Аббревиатуры" + " \n");
 
         // старый universally unique identifier
-        String oldUui = "OUUID";
-        System.out.println("старый universally unique identifier - " + oldUui);
+        String oldUuid = "UUID";
+        System.out.println("старый universally unique identifier - " + oldUuid);
 
         // производитель оперативной памяти
-        String ramM = "RAMM";
-        System.out.println("производитель оперативной памяти - " + ramM);
+        String ramManufacturer = "RAMM";
+        System.out.println("производитель оперативной памяти - " + ramManufacturer);
 
         // емкость жесткого диска
-        String hardV = "HDDV";
-        System.out.println("емкость жесткого диска - " + hardV);
+        String hardValue = "HDDV";
+        System.out.println("емкость жесткого диска - " + hardValue);
 
         // протокол передачи гипертекста
-        String htTp = "HTTP";
-        System.out.println("протокол передачи гипертекста - " + htTp);
+        String http = "HTTP";
+        System.out.println("протокол передачи гипертекста - " + http);
 
         // сокращенный uniform resource locator
         String shortUrl = "URL";
         System.out.println("сокращенный uniform resource locator - " + shortUrl);
 
         // новый идентификатор клиента
-        String newCi = "NCID";
-        System.out.println("новый идентификатор клиента - " + newCi);
+        String newCid = "NCID";
+        System.out.println("новый идентификатор клиента - " + newCid);
 
         // кодировка american standard code for information interchange
-        String codeAsCiI = "ASCII";
-        System.out.println("кодировка american standard code for information interchange - " + codeAsCiI);
+        String encodingAscii = "ASCII";
+        System.out.println("кодировка american standard code for information interchange - " + encodingAscii);
     }
 }
