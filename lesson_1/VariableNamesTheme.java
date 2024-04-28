@@ -124,8 +124,8 @@ public class VariableNamesTheme {
         System.out.println("2.boolean-переменные" + " \n");
 
         // сотни равны?
-        boolean hasEqualhundreds = true;
-        System.out.println("сотни равны? " + hasEqualhundreds);
+        boolean hasEqualHundreds = true;
+        System.out.println("сотни равны? " + hasEqualHundreds);
 
         // компьютер включен?
         boolean isTurnedOnComputer = true;
@@ -163,27 +163,27 @@ public class VariableNamesTheme {
         System.out.println(" \n" + "3.Аббревиатуры" + " \n");
 
         // старый universally unique identifier
-        String oldUuid = "UUID";
+        String oldUuid = "61f0c404-5cb3-11e7-907b-a6006ad3dba0";
         System.out.println("старый universally unique identifier - " + oldUuid);
 
         // производитель оперативной памяти
-        String ramManufacturer = "RAMM";
+        String ramManufacturer = "Micron";
         System.out.println("производитель оперативной памяти - " + ramManufacturer);
 
         // емкость жесткого диска
-        String hardValue = "HDDV";
-        System.out.println("емкость жесткого диска - " + hardValue);
+        float hddCapacity = 322.5f;
+        System.out.println("емкость жесткого диска - " + hddCapacity + " GB");
 
         // протокол передачи гипертекста
         String http = "HTTP";
         System.out.println("протокол передачи гипертекста - " + http);
 
         // сокращенный uniform resource locator
-        String shortUrl = "URL";
+        String shortUrl = "https://www.yandex.ru/search/?text=java&lr=121363";
         System.out.println("сокращенный uniform resource locator - " + shortUrl);
 
         // новый идентификатор клиента
-        String newCid = "NCID";
+        String newCid = "_ym_uid=1543226534123620835";
         System.out.println("новый идентификатор клиента - " + newCid);
 
         // кодировка american standard code for information interchange
