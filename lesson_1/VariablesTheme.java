@@ -1,70 +1,87 @@
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class VariablesTheme {
     public static void main(String[] args) {
         System.out.println("1.Вывод характеристик компьютера" + "\n");
         
-        byte numberOfCores = 4;
-        System.out.println(numberOfCores + "\nКоличество ядер компьютера");
+        byte coresQuantity = 4;
+        System.out.println(coresQuantity + " - Количество ядер компьютера");
         short mouseCost = 2500;
-        System.out.println(mouseCost + "\nСтоимость мышки в рублях (целых)");
-        int numberOfMonitors = 1;
-        System.out.println(numberOfMonitors + "\nКоличество мониторов у компьютера");
-        long numberOfFilesOnDiskE = 5352353;
-        System.out.println(numberOfFilesOnDiskE + "\nКоличество файлов на диске Е");
+        System.out.println(mouseCost + " - Стоимость мышки в рублях (целых)");
+        int monitorsQuantity = 1;
+        System.out.println(monitorsQuantity + " - Количество мониторов у компьютера");
+        long filesOnDiskE = 5352353;
+        System.out.println(filesOnDiskE + " - Количество файлов на диске Е");
         float keyboardWeight = 1.8f;
-        System.out.println(keyboardWeight + "\nВес клавиатуры в килограммах");
+        System.out.println(keyboardWeight + " - Вес клавиатуры в килограммах");
         double paintOnKeyWeight = 0.849593043;
-        System.out.println(paintOnKeyWeight + "\nВес краски на одной клавише в граммах");
+        System.out.println(paintOnKeyWeight + " - Вес краски на одной клавише в граммах");
+        boolean isMyComputer = true;
+        System.out.println(isMyComputer + " - это мой компьютер");
         char textOnKeyB = 'B';
-        System.out.println(textOnKeyB + "\nТекст на клавише B" + "\n");
+        System.out.println(textOnKeyB + " - Текст на клавише B" + "\n");
 
         System.out.println("2.Расчет стоимости товара со скидкой" + "\n");
-        int costOfPen = 100;
-        int costOfBook = 200;
-        float goodsCostWithoutDiscount = costOfPen + costOfBook;
-        float discount = goodsCostWithoutDiscount / 100 * 11;
-        float goodsCostWithDiscount = goodsCostWithoutDiscount - discount;
+        var penCosts = new BigDecimal(105.5);
+        var bookCosts = new BigDecimal(238.83);
+        var goodsCostWithoutDiscount = penCosts.add(bookCosts).setScale(2, RoundingMode.HALF_UP);
+        var discountValue = new BigDecimal(0.11);
+        var discount = goodsCostWithoutDiscount.multiply(discountValue).setScale(2, RoundingMode.HALF_UP);
+        var goodsCostWithDiscount = goodsCostWithoutDiscount.subtract(discount)
+                .setScale(2, RoundingMode.HALF_UP);
         System.out.println("Общая стоимость товаров без скидки = " + goodsCostWithoutDiscount + " руб.");
         System.out.println("Сумма скидки = " + discount + " руб.");
         System.out.println("Общая стоимость товаров со скидкой = " + goodsCostWithDiscount + " руб." + "\n");
 
-        System.out.println("3.Вывод слова JAVA" + "\n");
-        System.out.println("   J    a  v     v  a   " + "\n   J   a a  v   v  a a  ");
-        System.out.println("J  J  aaaaa  V V  aaaaa  " + "\n JJ  a     a  V  a     a" + "\n");
+        System.out.println("3.Вывод слова JAVA" + "\n" +
+                 "   J    a  v     v  a   " + "\n" +
+                 "   J   a a  v   v  a a  " + "J  J  aaaaa  V V  aaaaa  " + "\n" +
+                 " JJ  a     a  V  a     a" + "\n");
 
         System.out.println("4.Вывод min и max значений целых числовых типов" + "\n");
-        byte a = 127;
-        int q = a + 1;
-        int w = a - 1;
-        short b = 32767;
-        int e = b + 1;
-        int r = b - 1;
-        int c = 2147483647;
-        int t = c + 1;
-        int y = c - 1;
-        long d = 9223372036854775807l;
-        long u = d + 1;
-        long i = d - 1;
-        System.out.println(a + " " + q + " " + w);
-        System.out.println(b + " " + e + " " + r);
-        System.out.println(c + " " + t + " " + y);
-        System.out.println(d + " " + u + " " + i + "\n");
+        byte byteVariable = 127;
+        byteVariable = ++byteVariable;
+        System.out.println(byteVariable);
+        byteVariable = --byteVariable;
+        System.out.println(byteVariable);
+        short shortVariable = 32767;
+        shortVariable = ++shortVariable;
+        System.out.println(shortVariable);
+        shortVariable = --shortVariable;
+        System.out.println(shortVariable);
+        int intVariable = 2147483647;
+        intVariable = ++intVariable;
+        System.out.println(intVariable);
+        intVariable = --intVariable;
+        System.out.println(intVariable);
+        long longVariable = 9223372036854775807L;
+        longVariable = ++longVariable;
+        System.out.println(longVariable);
+        longVariable = --longVariable;
+        System.out.println(longVariable + "\n");
 
         System.out.println("5.Перестановка значений переменных" + "\n");
         int firstVariable = 2;
         int secondVariable = 5;
         System.out.println("Перестановка значений с помощью третьей переменной");
-        System.out.println("Исходные значения переменных:" + "\na - " + firstVariable + "\nb - " + secondVariable);
+        System.out.println("Исходные значения переменных:" + 
+                "\na - " + firstVariable + "\nb - " + secondVariable);
         int thirdVariable = 3;
         firstVariable = firstVariable + thirdVariable;
         secondVariable = secondVariable - thirdVariable;
-        System.out.println("Новые значения переменных:" + "\na - " + firstVariable + "\nb - " + secondVariable);
+        System.out.println("Новые значения переменных:" + "\na - " + firstVariable + "\nb - " +
+                  secondVariable);
         System.out.println("Перестановка значений с помощью арифметических операций");
         firstVariable = firstVariable + secondVariable - firstVariable;
         secondVariable = firstVariable + secondVariable + firstVariable / firstVariable;
-        System.out.println("Новые значения переменных:" + "\na - " + firstVariable + "\nb - " + secondVariable);
+        System.out.println("Новые значения переменных:" + "\na - " + firstVariable + "\nb - " +
+                   secondVariable);
         System.out.println("Перестановка значений с помощью побитовой операции");
-        System.out.println("Новое значение первой переменной в двоичной системе исчисления: " + Integer.toBinaryString(secondVariable));
-        System.out.println("Новое значение второй переменной в двоичной системе исчисления: " + Integer.toBinaryString(firstVariable) + "\n");
+        System.out.println("Новое значение первой переменной в двоичной системе исчисления: " +
+                   Integer.toBinaryString(secondVariable));
+        System.out.println("Новое значение второй переменной в двоичной системе исчисления: " +
+                   Integer.toBinaryString(firstVariable) + "\n");
 
         System.out.println("6.Вывод символов и их кодов" + "\n");
         char dollar = '$';
@@ -72,11 +89,11 @@ public class VariablesTheme {
         char atSign = '@';
         char verticalBar = '|';
         char tilde = '`';
-        System.out.println((int)dollar + " " + dollar);
-        System.out.println((int)asterisk + " " + asterisk);
-        System.out.println((int)atSign + " " + atSign);
-        System.out.println((int)verticalBar + " " + verticalBar);
-        System.out.println((int)tilde + " " + tilde + "\n");
+        System.out.println((int) dollar + " " + dollar);
+        System.out.println((int) asterisk + " " + asterisk);
+        System.out.println((int) atSign + " " + atSign);
+        System.out.println((int) verticalBar + " " + verticalBar);
+        System.out.println((int) tilde + " " + tilde + "\n");
 
         System.out.println("7.Вывод в консоль ASCII-арт Дюка" + "\n");
         char slash = '/';
@@ -86,9 +103,11 @@ public class VariablesTheme {
         char underscore = '_';
         System.out.println("     " + slash + backSlash + "     ");
         System.out.println("    " + slash + "  " + backSlash + "    ");
-        System.out.println("   " + slash + underscore + leftParenthesis + " " + rightParenthesis + backSlash + "    ");
-        System.out.println("  " + slash + "      "+ backSlash + "   ");
-        System.out.println(" " + slash + underscore + underscore + underscore + underscore + slash + backSlash + underscore + underscore +backSlash + "  \n");
+        System.out.println("   " + slash + underscore + leftParenthesis + " " + rightParenthesis + backSlash +
+                 "    ");
+        System.out.println("  " + slash + "      " + backSlash + "   ");
+        System.out.println(" " + slash + underscore + underscore + underscore + underscore + slash +
+                 backSlash + underscore + underscore + backSlash + "  \n");
 
         System.out.println("8.Вывод количества сотен, десятков и единиц числа" + "\n");
         int startNumber = 123;
